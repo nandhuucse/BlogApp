@@ -1,0 +1,11 @@
+.blog-card{
+    width: 18rem;
+    margin: 0.25rem;
+}
+.bloggy-view{
+    display: flex;
+    flex-wrap: wrap;
+}
+.category-form{
+    width: 300px;
+}
