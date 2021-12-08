@@ -10,6 +10,10 @@
     "build" : "cd client && npm run build",
     "deploy" : "cd client && npm install && npm run build"
   },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

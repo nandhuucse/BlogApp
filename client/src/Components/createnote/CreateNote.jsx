@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import swal from 'sweetalert';
+
 
 function CreateNote() {
   const [blogData, setBlogData] = useState({
@@ -7,7 +9,6 @@ function CreateNote() {
     content: "",
     category: "",
   });
-  const [isPosted, setIsPosted] = useState(false);
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -32,9 +33,9 @@ function CreateNote() {
         category: blogData.category,
       };
       axios.post("/create", newNote);
-      setIsPosted(true);
+      swal("Good job!", "Blog Saved", "success");
     } else {
-      alert("fill all fields to create blog");
+      swal("Warning", "Fill all fields to create blog", "warning");
     }
   };
   return (

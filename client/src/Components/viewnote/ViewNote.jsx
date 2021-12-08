@@ -21,18 +21,8 @@ function ViewNote() {
     const data = blogs.filter((blog) => blog.category === categories);
     if(categories === "-- Select Categories --") setFilteredData(blogs);
     else setFilteredData(data);
-  }, [categories]);
+  }, [blogs, categories]);
 
-
-  // const filteredBlogs=blogs.map(e=>{
-  //     if(e.category===categories){
-  //         setBlogs([]);
-  //         return blogs.push(e);
-  //     }
-
-  // })
-  // console.log(filteredBlogs);
-  // setBlogs([]);
   return (
     <div>
       <h1 className="text-center">Blogs</h1>
